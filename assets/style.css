@@ -19,11 +19,16 @@ header {
 main {
     width:50%;
     background-color: pink;
+    display: flex;
+    justify-items: right;
 }
 
 aside{
-    width:30%;
+    width:50%;
     background-color: palevioletred;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: right;
 }
 
 summary {
