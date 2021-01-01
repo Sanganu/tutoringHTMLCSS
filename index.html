@@ -5,71 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML-CSS Tutoring</title>
+    <title>JS Tutoring</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css" type="text/css" />
 </head>
 
 <body>
-    <header>
-        <h1>HTML INTRO</h1>
+    <header class="bg-primary">
         <nav id="navbar">
-            <ul>
-                <ll>
-                    <a href="">About</a>
-                    </li>
-                    <ll>
-                        <a href="">About</a>
-                        </li>
-                        <ll>
-                            <a href="">About</a>
-                            </li>
-            </ul>
-
+            <h1>Introduction to Flexbox</h1>
         </nav>
     </header>
-    <section id="bgset">
-        <h1>Welcome to HTML and CSS</h1>
-    </section>
-    <summary>
-        <div class="container">
-            <main>
-                <h3>colors</h3>
-                <ul>
-                    <li>Red</li>
-                    <li>Yellow</li>
-                    <li>Purple</li>
-                    <li>Pink</li>
-                </ul>
-            </main>
-            <aside>
-                <h4>Places</h4>
-                <ul>
-                    <li>Hawaii</li>
-                    <li>Germany</li>
-                    <li>Cape Cod</li>
-                    <li>Chile</li>
-                    <li>Mauritius</li>
-                    <li>Combodia</li>
-                    <li>London</li>
-                </ul>
-
-            </aside>
-        </div>
-        <article id="hello">
-            <p>Programming Languages</p>
-            <ul>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Java</li>
-                <li>C++</li>
-            </ul>
-        </article>
-
-    </summary>
+    
+   <main class="container bg-primary d-flex justify-content-center">
+       <article class="box bg-info m-1 p-1">One</article>
+       <article class="box bg-info m-1 p-1">Two</article>
+       <article class="box bg-info m-1 p-1">Three</article>
+       <article class="box bg-info m-1 p-1">four</article>   
+   </main>
+   <main>
+   <section class="container bg-danger align-items-start flex-column">
+        <article class="box bg-info m-1 p-1">Five</article>
+        <article class="box bg-info m-1 p-1">Six</article>
+        <article class="box bg-info m-1 p-1">Seven</article>
+        <article class="box bg-info m-1 p-1">Eight</article>   
+   </section>
+   <section class="container bg-secondary align-items-end flex-column-reverse">
+        <article class="box bg-info m-1 p-1">Red</article>
+        <article class="box bg-info m-1 p-1">Yellow</article>
+        <article class="box bg-info m-1 p-1">Orange</article>
+        <article class="box bg-info m-1 p-1">Greeen</article>   
+   </section>
+</main>
+<main class="container bg-warning d-flex flex-wrap-reverse">
+        <article class="box bg-info m-1 p-1">Purple</article>
+        <article class="box bg-info m-1 p-1">Indigo</article>
+        <article class="box bg-info m-1 p-1">Teal</article>
+        <article class="box bg-info m-1 p-1">Silver</article>   
+    </main>
+    <main class="container m-5 p-5 bg-secondary d-flex align-content-center flex-wrap">
+            <article class="box bg-info m-1 p-1">Dora</article>
+            <article class="box bg-info m-1 p-1">Diego</article>
+            <article class="box bg-info m-1 p-1">Boots</article>
+            <article class="box bg-info m-1 p-1">Flash</article>   
+        </main>
     <footer>
         &copy; 2020
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
