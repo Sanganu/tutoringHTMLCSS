@@ -1,10 +1,26 @@
-article{
-    width:200px;
+/* article{
+    width:auo;
     height:200px;
-}
+} */
 
 section{
     display: flex;
     flex-direction: column;
-    
+
+}
+
+body{
+    background-image: url("./img_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main{
+    opacity: 0.7;
+}
+
+footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
 }
