@@ -48,5 +48,10 @@ Features using Local Storage. setInterval, DOM Manipulation.
 
 
 ## Developed By:
-Sangeetha.K
-Senior Tutor & Grader
+
+
+#### Sangeetha.K
+
+###Senior Tutor & Grader
+
+## 2U/ Trilogy Education 
