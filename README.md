@@ -6,17 +6,17 @@
 
 ## Table Of Contents
 
-* (Branch1)[#branch1]
+* [Branch1](#branch1)
 
-* (Branch2)[#branch2]
+* [Branch2]([#branch2)
 
-* (Branch3)[#branch3]
+* [Branch3](#branch3)
 
-* (Branch4)[#branch4]
+* [Branch4](#branch4)
 
-* (Branch5)[#branch5]
+* [Branch5](#branch5)
 
-* (Branch6)[#branch6]
+* [Branch6](#branch6)
 
 #### Screenshot:
 ![Screenshot](https://github.com/Sanganu/tutoringHTMLCSS/blob/main/Screenshot.PNG)
@@ -52,6 +52,6 @@ Features using Local Storage. setInterval, DOM Manipulation.
 
 #### Sangeetha.K
 
-###Senior Tutor & Grader
+### Senior Tutor & Grader
 
 ## 2U/ Trilogy Education 
