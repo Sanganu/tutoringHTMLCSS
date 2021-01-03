@@ -46,6 +46,6 @@ Bootstrap - d-flex/align-items/flex-column/flex-column-reverse/flex-wrap.
 Features using Local Storage. setInterval, DOM Manipulation.
 
 
-Developed By:
+## Developed By:
 Sangeetha.K
 Senior Tutor & Grader
