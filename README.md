@@ -2,7 +2,7 @@
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ### Deployment
-! [Check the functionality][https://sanganu.github.io/tutoringHTMLCSS/]
+! [Check the functionality](https://sanganu.github.io/tutoringHTMLCSS/)
 
 ## Table Of Contents
 
@@ -19,7 +19,7 @@
 * (Branch6)[#branch6]
 
 #### Screenshot:
-! [Screenshot](https://github.com/Sanganu/tutoringHTMLCSS/blob/main/Screenshot.PNG)
+![Screenshot](https://github.com/Sanganu/tutoringHTMLCSS/blob/main/Screenshot.PNG)
 
 ### Branch 1:
 
