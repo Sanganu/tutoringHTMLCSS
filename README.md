@@ -20,7 +20,7 @@
 
 ### Branch6:
 
-Features using Locla Storage. setInterval, DOM Manipulation
+Features using Local Storage. setInterval, DOM Manipulation
 
 
 Developed By:
