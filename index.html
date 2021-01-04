@@ -22,32 +22,27 @@
 
         <main class="container bg-secondary ">
             <article class="box bg-dark text-white m-1 p-1">
-                    <section id="check2" class="border border-danger m-1 p-1 text-center">
-                            <h4>Timer</h4>
-                            <h4 id="test2"></h4>
-        
-                        </section>
-
+                <section id="check2" class="border border-danger m-1 p-1 text-center">
+                    <h4>Timer</h4>
+                    <h4 id="test2"></h4>
+                </section>
                 <section id="check1" class="border border-danger m-1 p-1 text-center">
                     <h4>Counter</h4>
                     <h3 id="test1"></h3>
-                   
                 </section>
-            
-
             </article>
             <article class="box bg-dark text-center text-white m-1 p-1 d-flex justify-content-center">
-
+                <button class="btn btn-primary" id="logentry">Lap</button>
                 <button class="btn btn-success" id="count">Add Count</button>
                 <button class="btn btn-warning" id="resetCount">Reset Count &amp; Timer</button>
-                <!-- <button class="btn btn-primary" id="logentry">Log your workout</button> -->
+
                 <button class="btn btn-danger" id="clearLog">Clear Log</button>
                 <button class="btn btn-info" id="stoptimer">Stop Timer</button>
                 <button class="btn btn-primary" id="restarttimer">Restart Timer</button>
-        
+
             </article>
-       
-       
+
+
             <!-- <article class="box bg-dark m-1 p-1">Dora</article>
             <article class="box bg-dark text-white me-auto m-1 p-1">
                 <ul>
@@ -61,18 +56,35 @@
 
         <article class="box bg-dark text-white m-1 p-1">
             <h5 class="text-center">Log Book</h5>
-            <table class="table table-dark">
-                <thead>
-                  <tr>
-                    <th scope="col">Count</th>
-                    <th scope="col">Timer</th>
-                  </tr>
-                </thead>
-                <tbody  id="performanceLog">
-                  </tbody>
-                  </table>
-            <section></section>
-            </article>
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Count</th>
+                                <th scope="col">Timer</th>
+                            </tr>
+                        </thead>
+                        <tbody id="performanceLog">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Lap</th>
+                                <th scope="col">Timer</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lapsDisplay">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </article>
 
     </main>
 
