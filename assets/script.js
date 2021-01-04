@@ -61,7 +61,7 @@ countHTML.addEventListener("click", function () {
     test1HTML.innerText = counter
 })
 
-logHTML.addEventListener("click",saveLapDisplay)
+logHTML.addEventListener("click", saveLap)
 
 function saveToLocalStorage() {
     let performance = JSON.parse(localStorage.getItem("performance")) || []
@@ -97,10 +97,9 @@ function saveToLocalStorage() {
 function retriveLocalStorage() {
     let performance = JSON.parse(localStorage.getItem("performance")) || []
     let htmlString = ""
-    htmlString += performance.map((dataentry) => {
-        return (`<tr><td>${dataentry.reps}</td><td>${dataentry.timer}</td></tr>`)
-    })
-    // htmlString += "</ul>"
+    for (let i =0; i<performance.length; i++) {
+        htmlString = htmlString + `<tr><td>${performance[i].reps}</td><td>${performance[i].timer}</td></tr>`
+    }
     console.log(htmlString)
     perfHTML.innerHTML = htmlString
 }
@@ -123,7 +122,9 @@ resetCountHTML.addEventListener("click", function () {
 
 clearLogHTML.addEventListener("click", function () {
     localStorage.removeItem("performance");
+    localStorage.removeItem("lapLog")
     perfHTML.innerHTML = ""
+    lapDispHTML.innerHTML = ""
 })
 
 
@@ -131,15 +132,33 @@ restartHTML.addEventListener("click", function () {
     clockStart = setInterval(displayCount, 1000)
 })
 
-function saveLap(){
-  let lapLog = JSON.parse(localStorage.getItem("lapLog")) || [];
-  lap++;
-  lapLog.push({
-      lap: lap,
-      timer:timer
-  })
-  localStorage.setItem("lapLog",JSON.stringify(lapLog))
-
+function saveLap() {
+    let lapLog = JSON.parse(localStorage.getItem("lapLog")) || [];
+    lap++;
+    if (timer < 10) {
+        dsecs = "0" + timer;
+    }
+    else {
+        dsecs = timer
+    }
+    if (min < 10) {
+        dmins = "0" + min;
+    }
+    else {
+        dmins = min;
+    }
+    if (hr < 10) {
+        dhours = "0" + hr
+    }
+    else {
+        dhours = hr
+    }
+    lapLog.push({
+        lap: lap,
+        timer: `${dhours} : ${dmins} : ${dsecs}`
+    })
+    localStorage.setItem("lapLog", JSON.stringify(lapLog))
+    saveLapDisplay()
 }
 
 
@@ -147,13 +166,14 @@ function saveLap(){
 function saveLapDisplay() {
     let lapLog = JSON.parse(localStorage.getItem("lapLog")) || []
     let htmlString = ""
-    htmlString += lapLog.map((dataentry) => {
-        return (`<tr><td>${dataentry.lap}</td><td>${dataentry.timer}</td></tr>`)
-    })
-    // htmlString += "</ul>"
+
+    for(let i=0;i<lapLog.length;i++)
+    {
+       htmlString = htmlString + `<tr><td>${lapLog[i].lap}</td><td>${lapLog[i].timer}</td></tr>`    
+    }
     console.log(htmlString)
     lapDispHTML.innerHTML = htmlString
 }
 
-saveLap()
+saveLapDisplay()
 retriveLocalStorage()
