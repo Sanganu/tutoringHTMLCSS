@@ -14,13 +14,13 @@
 <body>
     <header class="bg-dark text-white">
         <nav id="navbar">
-            <h2>Simple App to Log your performance</h2>
+            <h2>Count / Lap / Timer</h2>
         </nav>
     </header>
 
     <main class="container bg-secondary">
 
-        <main class="container bg-secondary ">
+        <main class="container bg-secondary m-2 p-2 ">
             <article class="box bg-dark text-white m-1 p-1">
                 <section id="check2" class="border border-danger m-1 p-1 text-center">
                     <h4>Timer</h4>
@@ -31,27 +31,18 @@
                     <h3 id="test1"></h3>
                 </section>
             </article>
-            <article class="box bg-dark text-center text-white m-1 p-1 d-flex justify-content-center">
-                <button class="btn btn-primary" id="logentry">Lap</button>
+            <article class="box bg-dark text-center text-white m-2 p-2 d-flex justify-content-center">
+           
                 <button class="btn btn-success" id="count">Add Count</button>
                 <button class="btn btn-warning" id="resetCount">Reset Count &amp; Timer</button>
 
                 <button class="btn btn-danger" id="clearLog">Clear Log</button>
-                <button class="btn btn-info" id="stoptimer">Stop Timer</button>
+                <button class="btn btn-success" id="logentry">Lap</button>
                 <button class="btn btn-primary" id="restarttimer">Restart Timer</button>
+                <button class="btn btn-info" id="stoptimer">Stop Timer</button>
+                
 
             </article>
-
-
-            <!-- <article class="box bg-dark m-1 p-1">Dora</article>
-            <article class="box bg-dark text-white me-auto m-1 p-1">
-                <ul>
-                    <li>Set Interval</li>
-                    <li>Local Storage</li>
-                    <li>Event Listener</li>
-                </ul>
-            </article> -->
-
         </main>
 
         <article class="box bg-dark text-white m-1 p-1">
@@ -87,7 +78,19 @@
         </article>
 
     </main>
-
+    <main class="container bg-secondary text-center">
+        <h3>Timer</h3>
+        
+        <h4 id="stopwatchdisplay"></h4>
+        <form id="startwatch">
+            <label>Enter Minutes for Timer</label>
+            <input id="timercount" type="number"  min=5/>
+            <input id="timercount" type="number"  min=5/>
+            <input id="timercount" type="number"  min=5/>
+            <button  type="submit" class="btn btn-primary">Start Timer</button>
+            <button id="stopwatch" class="btn btn-danger">Stop Timer</button>
+        </form>
+    </main>
     </main>
 
     <footer class="bg-dark text-white">

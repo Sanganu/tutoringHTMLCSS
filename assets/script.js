@@ -9,6 +9,13 @@ let resetCountHTML = document.getElementById("resetCount");
 let clearLogHTML = document.getElementById("clearLog")
 let restartHTML = document.getElementById("restarttimer")
 let lapDispHTML = document.getElementById("lapsDisplay");
+let startWatchHTML = document.getElementById("startwatch");
+let stopwatchHTML = document.getElementById("stopwatch");
+let secondtimerCountHTML = document.getElementById("secondtimercount");
+let minutetimerCountHTML = document.getElementById("minutetimercount");
+let hourtimerCountHTML = document.getElementById("hourtimercount");
+let stopWatchDisplay = document.getElementById("stopwatchdisplay");
+
 
 
 let counter = 0;
@@ -17,6 +24,7 @@ let min = 0;
 let sec = 0;
 let hr = 0;
 let lap = 0;
+let stopWatchCount = 0;
 
 function displayCount() {
     let dsecs;
@@ -129,6 +137,7 @@ clearLogHTML.addEventListener("click", function () {
 
 
 restartHTML.addEventListener("click", function () {
+    timer =0;
     clockStart = setInterval(displayCount, 1000)
 })
 
@@ -174,6 +183,14 @@ function saveLapDisplay() {
     console.log(htmlString)
     lapDispHTML.innerHTML = htmlString
 }
+
+startWatchHTML.addEventListener("click",function(){
+    stopWatchCount = timerCountHTML.value;
+    stopWatchObject = setTimer(displayStopWatch,)
+})
+
+
+
 
 saveLapDisplay()
 retriveLocalStorage()
