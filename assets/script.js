@@ -185,7 +185,9 @@ function saveLapDisplay() {
 }
 
 startWatchHTML.addEventListener("click",function(){
-    stopWatchCount = timerCountHTML.value;
+    minute= minutetimerCountHTML.value;
+    second= secondtimerCountHTML.value;
+    hour=hourtimerCountHTML.value;
     stopWatchObject = setTimer(displayStopWatch,)
 })
 

@@ -83,10 +83,10 @@
         
         <h4 id="stopwatchdisplay"></h4>
         <form id="startwatch">
-            <label>Enter Minutes for Timer</label>
-            <input id="timercount" type="number"  min=5/>
-            <input id="timercount" type="number"  min=5/>
-            <input id="timercount" type="number"  min=5/>
+            
+            <input id="hourtimercount" type="number"  placeholder="00" min=0 max=12/>
+            <input id="minutetimercount" type="number" placeholder="00" min=0 max=60/>
+            <input id="secondtimercount" type="number" placeholder="00" min=0 max=60/>
             <button  type="submit" class="btn btn-primary">Start Timer</button>
             <button id="stopwatch" class="btn btn-danger">Stop Timer</button>
         </form>
