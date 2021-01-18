@@ -9,13 +9,17 @@ let resetCountHTML = document.getElementById("resetCount");
 let clearLogHTML = document.getElementById("clearLog")
 let restartHTML = document.getElementById("restarttimer")
 let lapDispHTML = document.getElementById("lapsDisplay");
+
+// Timer Section
 let startWatchHTML = document.getElementById("startwatch");
-let stopwatchHTML = document.getElementById("stopwatch");
+let stopWatchHTML = document.getElementById("stopwatch");
 let secondtimerCountHTML = document.getElementById("secondtimercount");
 let minutetimerCountHTML = document.getElementById("minutetimercount");
 let hourtimerCountHTML = document.getElementById("hourtimercount");
 let stopWatchDisplay = document.getElementById("stopwatchdisplay");
-
+let totalseconds = 0;
+let minuteObject = 0;
+let minute = 0;
 
 
 let counter = 0;
@@ -25,6 +29,8 @@ let sec = 0;
 let hr = 0;
 let lap = 0;
 let stopWatchCount = 0;
+let d1;
+let d2;
 
 function displayCount() {
     let dsecs;
@@ -138,6 +144,7 @@ clearLogHTML.addEventListener("click", function () {
 
 restartHTML.addEventListener("click", function () {
     timer =0;
+    clearInterval(clockStart)
     clockStart = setInterval(displayCount, 1000)
 })
 
@@ -184,15 +191,54 @@ function saveLapDisplay() {
     lapDispHTML.innerHTML = htmlString
 }
 
-startWatchHTML.addEventListener("click",function(){
-    minute= minutetimerCountHTML.value;
-    second= secondtimerCountHTML.value;
-    hour=hourtimerCountHTML.value;
-    stopWatchObject = setTimer(displayStopWatch,)
+startWatchHTML.addEventListener("submit",function(event){
+    event.preventDefault()
+    minute= parseInt(minutetimerCountHTML.value) || 0;
+    second= parseInt(secondtimerCountHTML.value )|| 0;
+    hour=parseInt(hourtimerCountHTML.value) || 0;
+     d1 = new Date();
+     d2 = new Date(d1);
+    d2.setSeconds(d1.getSeconds() + second)
+    d2.setMinutes(d1.getMinutes() + minute)
+    d2.setHours(d1.getHours() + hour)
+
+    console.log(d1,d2,minute,second,hour)
 })
 
 
+function displayMinute(){
+    document.getElementById("minute").innerText = minute;
+    if (minute === 0){
+        alert("Timer Done")
+        clearInterval(minuteObject)
+    }
+    else{
+        minute--
+    }
+ 
+}
 
+function today(){
+    let now = document.getElementsByClassName("now")
+    let day = new Date()
+    now[0].textContent = day.toLocaleDateString();
+    now[1].textContent = day.toLocaleTimeString()
+}
+
+stopWatchHTML.addEventListener("click",function(){
+    if (d1 === d2){
+        alert("Timer done!!!");
+        d1 =""
+        d2 =""
+    }
+})
 
 saveLapDisplay()
 retriveLocalStorage()
+let currentDay = setInterval(today,1000);
+
+
+//  d1 = new Date ()
+//     d2 = new Date ( d1 );
+// d2.setMinutes ( d1.getMinutes() + 30 );
+// alert ( d2 );

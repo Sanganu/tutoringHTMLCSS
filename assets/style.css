@@ -28,5 +28,5 @@ footer{
 }
 
 #startwatch input{
-    width: 5%;
+   max-width:  15%;
 }
