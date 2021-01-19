@@ -67,7 +67,7 @@
 
                         <button class="btn btn-success" id="logentry">Lap</button>
                         <button class="btn btn-warning" id="stoptimer">Stop Timer</button>
-                        <button class="btn btn-primary" id="restarttimer">Restart Timer</button>
+                        <button class="btn btn-primary" id="restarttimer">Start / Restart Timer</button>
 
                     </section>
 
@@ -87,7 +87,7 @@
         </main>
 
     </main>
-    <main class="container bg-secondary text-center">
+    <main class="container bg-secondary text-center p-3 m-3">
             <section class="box row bg-dark text-center text-white m-2 p-2 d-flex justify-content-center">
                     <h5 class="now"></h5>
                     <h5 class="now"></h6>
@@ -115,24 +115,31 @@
         </article>
     </main>
     </main>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Launch demo modal
-          </button>
-          
+  
           <!-- Modal -->
-          <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal text-center" id="Modal" tabindex="-1">
             <div class="modal-dialog">
               <div class="modal-content">
+
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <h5 class="modal-title text-center" id="exampleModalLabel">Timer</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                  ...
+                <div class="modal-body d-flex justify-content-between">
+                    <section>
+                            <h6>Current Time</h6>
+                            <p class="stopTimer"></p>
+                    </section>
+                    <section>
+                        <h6>End Timer</h6>
+                            <p class="stopTimer"></p>
+                    </section>
+                  
+               
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+  
                 </div>
               </div>
             </div>
@@ -140,9 +147,14 @@
     <footer class="bg-dark text-white">
         &copy; Sangeetha.K, 2020
     </footer>
+    <!-- The following 2 links are Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+        
     <script src="./assets/script.js"></script>
 </body>
 

@@ -1,4 +1,8 @@
-let clockStart = setInterval(displayCount, 1000)
+// Global Variables
+
+//This can be uncommented if you want the timer running on page load
+// let clockStart = setInterval(displayCount, 1000) 
+let clockStart;
 let countHTML = document.getElementById("count");
 let test1HTML = document.getElementById("test1");
 let test2HTML = document.getElementById("test2");
@@ -17,6 +21,9 @@ let secondtimerCountHTML = document.getElementById("secondtimercount");
 let minutetimerCountHTML = document.getElementById("minutetimercount");
 let hourtimerCountHTML = document.getElementById("hourtimercount");
 let stopWatchDisplay = document.getElementById("stopwatchdisplay");
+let modalHTML = document.querySelectorAll(".stopTimer")
+
+
 let totalseconds = 0;
 let minuteObject = 0;
 let minute = 0;
@@ -29,6 +36,7 @@ let sec = 0;
 let hr = 0;
 let lap = 0;
 let stopWatchCount = 0;
+let stopWatchTimer;
 let d1;
 let d2;
 
@@ -101,7 +109,7 @@ function saveToLocalStorage() {
         reps: counter,
         timer: `${dhours} : ${dmins} : ${dsecs}`
     })
-    console.log("Log", performance)
+    // console.log("Log", performance)
     localStorage.setItem("performance", JSON.stringify(performance));
     counter = 0;
     timer = 0;
@@ -111,10 +119,10 @@ function saveToLocalStorage() {
 function retriveLocalStorage() {
     let performance = JSON.parse(localStorage.getItem("performance")) || []
     let htmlString = ""
-    for (let i =0; i<performance.length; i++) {
+    for (let i = 0; i < performance.length; i++) {
         htmlString = htmlString + `<tr><td>${performance[i].reps}</td><td>${performance[i].timer}</td></tr>`
     }
-    console.log(htmlString)
+    // console.log(htmlString)
     perfHTML.innerHTML = htmlString
 }
 
@@ -143,8 +151,9 @@ clearLogHTML.addEventListener("click", function () {
 
 
 restartHTML.addEventListener("click", function () {
-    timer =0;
-    clearInterval(clockStart)
+    timer = 0;
+    if (clockStart) clearInterval(clockStart)
+    // console.log("Start/restart")
     clockStart = setInterval(displayCount, 1000)
 })
 
@@ -183,59 +192,75 @@ function saveLapDisplay() {
     let lapLog = JSON.parse(localStorage.getItem("lapLog")) || []
     let htmlString = ""
 
-    for(let i=0;i<lapLog.length;i++)
-    {
-       htmlString = htmlString + `<tr><td>${lapLog[i].lap}</td><td>${lapLog[i].timer}</td></tr>`    
+    for (let i = 0; i < lapLog.length; i++) {
+        htmlString = htmlString + `<tr><td>${lapLog[i].lap}</td><td>${lapLog[i].timer}</td></tr>`
     }
-    console.log(htmlString)
+    // console.log(htmlString)
     lapDispHTML.innerHTML = htmlString
 }
 
-startWatchHTML.addEventListener("submit",function(event){
+startWatchHTML.addEventListener("submit", function (event) {
     event.preventDefault()
-    minute= parseInt(minutetimerCountHTML.value) || 0;
-    second= parseInt(secondtimerCountHTML.value )|| 0;
-    hour=parseInt(hourtimerCountHTML.value) || 0;
-     d1 = new Date();
-     d2 = new Date(d1);
+    minute = parseInt(minutetimerCountHTML.value) || 0;
+    second = parseInt(secondtimerCountHTML.value) || 0;
+    hour = parseInt(hourtimerCountHTML.value) || 0;
+    d1 = new Date();
+    d2 = new Date(d1);
     d2.setSeconds(d1.getSeconds() + second)
     d2.setMinutes(d1.getMinutes() + minute)
     d2.setHours(d1.getHours() + hour)
 
-    console.log(d1,d2,minute,second,hour)
+    // console.log(d1,d2,minute,second,hour)
+    $("#Modal").modal("show")
+    modalHTML[0].textContent = d1.toLocaleTimeString()
+    modalHTML[1].textContent = d2.toLocaleTimeString()
+    clearInterval(stopWatchTimer)
+    stopWatchTimer = setInterval(displayStopWatch, 1000)
+
 })
 
+function displayStopWatch() {
+    // console.log(d1,d2);
+    d1 = new Date();
+    modalHTML[0].textContent = d1.toLocaleTimeString()
+    
+    if (d1 >= d2) {
+        clearInterval(stopWatchTimer)
+        $("#Modal").modal("close")
+    }
+}
 
-function displayMinute(){
+
+function displayMinute() {
     document.getElementById("minute").innerText = minute;
-    if (minute === 0){
+    if (minute === 0) {
         alert("Timer Done")
         clearInterval(minuteObject)
     }
-    else{
+    else {
         minute--
     }
- 
+
 }
 
-function today(){
+function today() {
     let now = document.getElementsByClassName("now")
     let day = new Date()
     now[0].textContent = day.toLocaleDateString();
     now[1].textContent = day.toLocaleTimeString()
 }
 
-stopWatchHTML.addEventListener("click",function(){
-    if (d1 === d2){
+stopWatchHTML.addEventListener("click", function () {
+    if (d1 === d2) {
         alert("Timer done!!!");
-        d1 =""
-        d2 =""
+        d1 = ""
+        d2 = ""
     }
 })
 
 saveLapDisplay()
 retriveLocalStorage()
-let currentDay = setInterval(today,1000);
+let currentDay = setInterval(today, 1000);
 
 
 //  d1 = new Date ()
