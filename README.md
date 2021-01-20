@@ -2,7 +2,7 @@
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ### Deployment
-!(Check the functionality)[https://sanganu.github.io/tutoringHTMLCSS/]
+![Check the functionality](https://sanganu.github.io/tutoringHTMLCSS/)
 
 ## Table Of Contents
 
@@ -48,7 +48,7 @@ Features using Local Storage. setInterval, DOM Manipulation.
 
 #### Screenshot
 
-![Screenshot]()
+![Screenshot](https://github.com/Sanganu/tutoringHTMLCSS/blob/branch6/assets/Screenshot_update.PNG)
 
 ## Developed By:
 Sangeetha.K
