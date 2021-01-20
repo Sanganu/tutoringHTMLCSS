@@ -18,8 +18,7 @@
 
 * [Branch6](#branch6)
 
-#### Screenshot:
-![Screenshot](https://github.com/Sanganu/tutoringHTMLCSS/blob/main/Screenshot.PNG)
+
 
 ### Branch 1:
 
@@ -47,6 +46,11 @@ Bootstrap - d-flex/align-items/flex-column/flex-column-reverse/flex-wrap.
 Features using Local Storage. setInterval, DOM Manipulation.
 
 
+#### Screenshot
+
+![Screenshot](https://github.com/Sanganu/tutoringHTMLCSS/blob/branch6/assets/Screenshot_update.PNG)
+
+
 ## Developed By:
 
 
@@ -55,3 +59,4 @@ Features using Local Storage. setInterval, DOM Manipulation.
 ### Senior Tutor & Grader
 
 ## 2U/ Trilogy Education 
+
