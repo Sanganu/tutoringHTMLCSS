@@ -226,6 +226,8 @@ function displayStopWatch() {
     
     if (d1 >= d2) {
         clearInterval(stopWatchTimer)
+        const HTMLele = document.createElement("audio")
+        HTMLele.setAttribute("src","./assets/ringer.js")
         $("#Modal").modal("close")
     }
 }
