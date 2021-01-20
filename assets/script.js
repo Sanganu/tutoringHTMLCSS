@@ -206,6 +206,13 @@ startWatchHTML.addEventListener("submit", function (event) {
     hour = parseInt(hourtimerCountHTML.value) || 0;
     d1 = new Date();
     d2 = new Date(d1);
+    console.log(d1.getSeconds() + second,d1.getMinutes() + minute,d1.getHours() + hour)
+    if (d1.getSeconds() + second > 59){
+        minute++;
+    }
+    if(d1.getMinutes() + minute > 59){
+        hour++
+    }
     d2.setSeconds(d1.getSeconds() + second)
     d2.setMinutes(d1.getMinutes() + minute)
     d2.setHours(d1.getHours() + hour)
