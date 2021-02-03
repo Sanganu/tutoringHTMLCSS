@@ -1,8 +1,8 @@
 // Global Variables
 
 //This can be uncommented if you want the timer running on page load
-// let clockStart = setInterval(displayCount, 1000) 
-let clockStart;
+let clockStart = setInterval(displayCount, 1000) 
+// let clockStart;
 let countHTML = document.getElementById("count");
 let test1HTML = document.getElementById("test1");
 let test2HTML = document.getElementById("test2");
