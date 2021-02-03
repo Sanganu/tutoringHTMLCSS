@@ -238,7 +238,11 @@ function displayStopWatch() {
         HTMLele.setAttribute("src","./assets/sounds.mp4")
         HTMLele.setAttribute("loop",true)
        divEle.appendChild(HTMLele);
-       divEle.children[0].play()
+       divEle.children[0].play();
+       const closeEle = document.querySelector(".btn-close")
+       closeEle.addEventListener("click", function(){
+           divEle.children[0].setAttribute("src","");
+       })
        console.log(divEle)
     }
 }
