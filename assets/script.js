@@ -233,14 +233,18 @@ function displayStopWatch() {
     
     if (d1 >= d2) {
         clearInterval(stopWatchTimer)
+        const divEle = document.getElementById("stopTimer")
         const HTMLele = document.createElement("audio")
-        HTMLele.setAttribute("src","./assets/ringer.js")
-        $("#Modal").modal("close")
+        HTMLele.setAttribute("src","./assets/sounds.mp4")
+        HTMLele.setAttribute("loop",true)
+       divEle.appendChild(HTMLele);
+       divEle.children[0].play()
+       console.log(divEle)
     }
 }
 
 
-function displayMinute() {
+function displayMinute() { 
     document.getElementById("minute").innerText = minute;
     if (minute === 0) {
         alert("Timer Done")
