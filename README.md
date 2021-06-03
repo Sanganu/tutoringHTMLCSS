@@ -49,7 +49,7 @@ Features using Local Storage. setInterval, DOM Manipulation.
 #### Screenshot
 
 ! [Screenshot](https://github.com/Sanganu/tutoringHTMLCSS/blob/branch6/assets/Screenshot_update.PNG)
-! [Lighthouse]https://github.com/Sanganu/tutoringHTMLCSS/blob/branch6/assets/Capture.PNG)
+! [Lighthouse](https://github.com/Sanganu/tutoringHTMLCSS/blob/branch6/assets/Capture.PNG)
 
 ## Developed By:
 Sangeetha.K
