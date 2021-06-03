@@ -5,7 +5,8 @@ const FILES_TO_CACHE = [
   "/assets/style.css",
   "/assets/script.js",
   "/assets/img_1.jpg",
-  "/assets/bootstrap.min.css"
+  "/assets/bootstrap.min.css",
+  "/assets/Capture.PNG"
 ];
 
 const CACHE_NAME = "static-cache-v2";
